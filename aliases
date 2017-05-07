@@ -1,0 +1,28 @@
+# adding colours
+alias ls="ls -hFG"
+alias ll="ls -l"
+alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-path '4;36'"
+alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
+
+# colourized cat
+alias ccat="pygmentize -g"
+
+# vi/vim
+alias vi="vim"
+
+# git
+alias gcm="git checkout master"
+alias gco="git checkout"
+alias gps="git push"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# OS X has no `md5sum`, so use `md5` as a fallback
+command -v md5sum > /dev/null || alias md5sum="md5"
+
+# OS X has no `sha1sum`, so use `shasum` as a fallback
+command -v sha1sum > /dev/null || alias sha1sum="shasum"
+
+# Other shortcuts
+alias be="bundle exec"

@@ -1,0 +1,17 @@
+# Locale stuff
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Path related variables
+export USER_BIN="~/bin"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Useful incase ssh is installed through homebrew
+export GIT_SSH=/usr/bin/ssh
+
+# Aws default config
+export AWS_PROFILE=default
+export AWS_REGION=eu-west-1
+
+# modify path as last option
+export PATH=$USER_BIN:$(pyenv root)/shims:$PATH

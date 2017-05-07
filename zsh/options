@@ -1,0 +1,47 @@
+# changing directories
+setopt auto_pushd # auto push old directory on the stack to easily go back
+setopt chase_links # resolve links when doing cd with .. in the path
+setopt pushd_ignore_dups
+
+# completion
+setopt completeinword
+setopt auto_list
+setopt auto_menu
+setopt hash_list_all
+
+# expansion and globbing
+setopt NO_case_match
+setopt extended_glob
+setopt glob
+
+# history
+setopt append_history
+setopt hist_expire_dups_first
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt share_history
+setopt extended_history
+
+# input/output
+setopt clobber # allow redirection to truncate files
+setopt short_loops
+setopt NO_sh_word_split
+
+# job control
+setopt bg_nice # run background jobs at lower priority
+setopt NO_hup
+setopt monitor
+setopt long_list_jobs
+setopt notify
+setopt NO_beep
+
+# prompting
+setopt prompt_cr
+setopt prompt_percent
+setopt prompt_subst
+
+# scripts and functions
+setopt c_bases
+setopt c_precedences
