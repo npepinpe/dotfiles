@@ -47,7 +47,7 @@ prompt_git() {
 		[[ $git_status =~ ($'\n'|^)A ]] && prompt+=" ✚"
 		[[ $git_status =~ ($'\n'|^).D ]] && prompt+=" ✗"
 		[[ $git_status =~ ($'\n'|^)D ]] && prompt+=" ✗"
-    [[ $git_status =~ ($'\n'|^).\? ]] && prompt+=" ?"
+    [[ $git_status =~ ($'\n'|^)\\? ]] && prompt+=" ?"
 
     prompt_segment green black $prompt
   fi
@@ -64,4 +64,4 @@ generate_prompt() {
   prompt_end true
 }
 
-PS1="%{%f%b%k%}$(generate_prompt $?) "
+PS1='%{%f%b%k%}$(generate_prompt $?) '

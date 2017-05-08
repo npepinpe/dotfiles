@@ -1,6 +1,6 @@
 # changing directories
-setopt auto_pushd # auto push old directory on the stack to easily go back
-setopt chase_links # resolve links when doing cd with .. in the path
+setopt auto_pushd
+setopt chase_links
 setopt pushd_ignore_dups
 
 # completion
@@ -25,12 +25,12 @@ setopt share_history
 setopt extended_history
 
 # input/output
-setopt clobber # allow redirection to truncate files
+setopt clobber
 setopt short_loops
 setopt NO_sh_word_split
 
 # job control
-setopt bg_nice # run background jobs at lower priority
+setopt bg_nice
 setopt NO_hup
 setopt monitor
 setopt long_list_jobs
