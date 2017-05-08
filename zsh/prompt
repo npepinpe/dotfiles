@@ -64,4 +64,5 @@ generate_prompt() {
   prompt_end true
 }
 
-PS1='%{%f%b%k%}$(generate_prompt $?) '
+PROMPT='%{%f%b%k%}$(generate_prompt $?) '
+RPROMPT='[$AWS_PROFILE]'
