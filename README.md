@@ -7,3 +7,4 @@
 5. `ln -s dotfiles/bundlerc ~/.bundle/config`
 6. Add `source dotfiles/zshrc` to ~/.zshrc
 7. Add `source dotfiles/profile` to ~/.profile
+8. `ln -s dotfiles/vimrc ~/.vimrc`

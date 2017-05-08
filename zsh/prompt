@@ -54,7 +54,7 @@ prompt_git() {
 }
 
 prompt_exit_status() {
-  [[ $1 -ne 0 && $1 -ne 148 ]] && prompt_segment red default ""
+  [[ $1 -ne 0 && $1 -ne 148 ]] && prompt_segment red default "\u26A1"
 }
 
 generate_prompt() {

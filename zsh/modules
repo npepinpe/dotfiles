@@ -1,3 +1,3 @@
-for module in compctl complete complist computil datetime deltochar mathfunc parameters terminfo ; do
-  zmodload -i zsh/${module} 2>/dev/null || print "no ${module} found"
+for module in compctl complete complist computil datetime deltochar mathfunc parameter terminfo ; do
+  zmodload -i zsh/${module} 2>/dev/null || print "zsh init: no module ${module} found"
 done && builtin unset -v mod
