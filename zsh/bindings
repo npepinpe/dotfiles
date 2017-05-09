@@ -1,0 +1,14 @@
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+# move forward/backword across words using modifier+arrow key
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+
+# home/end keys
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
+# del key
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
