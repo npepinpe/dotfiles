@@ -5,6 +5,7 @@ export DOTDIR=$(dirname ${(%):-%N})
 
 # load aliases
 [ -f "$DOTDIR/aliases" ] && source "$DOTDIR/aliases"
+[ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
 
 # load zsh directory
 for file in $DOTDIR/zsh/*; do

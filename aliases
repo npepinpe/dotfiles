@@ -26,8 +26,3 @@ command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # Other shortcuts
 alias be="bundle exec"
-
-# Work aliases
-alias cim_rds="mysql --login-path=mysql-master CimRails_production"
-alias cim_rds_read="mysql --login-path=mysql-slave CimRails_production"
-alias cim_dwh="psql -hcimrails.c5pbmwkjguqm.eu-west-1.redshift.amazonaws.com --port=5439 --username=cim --dbname=dev"
