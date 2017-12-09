@@ -1,6 +1,6 @@
 export DOTDIR=$(dirname ${(%):-%N})
 
-# load variables
+# load sh profile
 [ -f "$DOTDIR/profile" ] && source "$DOTDIR/profile"
 
 # load aliases

@@ -1,2 +1,5 @@
 ---
 BUNDLE_PATH: "vendor/bundle"
+BUNDLE_GEM__TEST: "minitest"
+BUNDLE_GEM__MIT: "false"
+BUNDLE_GEM__COC: "false"
