@@ -13,5 +13,8 @@ export GIT_SSH=/usr/bin/ssh
 export AWS_PROFILE=default
 export AWS_REGION=eu-west-1
 
+# Correct pkg config for Homebrew
+export PKG_CONFIG_PATH=$(brew --prefix)/lib/pkgconfig
+
 # modify path as last option
 export PATH=$USER_BIN:$(pyenv root)/shims:$PATH
