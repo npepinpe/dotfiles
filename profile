@@ -2,7 +2,3 @@
 
 [ -f "$DOTDIR/vars" ] && source "$DOTDIR/vars"
 [ -f "$HOME/.vars" ] && source "$HOME/.vars"
-
-# Setup pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
