@@ -1,0 +1,16 @@
+#!/bin/bash
+# gfrr - executes gfr in parallel on pwd and sub-directories
+# $1 => parallelism (default to number of cores)
+# $2 => maximum depth (default 1)
+
+set +v
+set -e
+
+MAXPROCS="$1"
+MAXDEPTH="${2:-1}"
+
+if [ -z "$MAXPROCS" ]; then
+  MAXPROCS=$( ls -d /sys/devices/system/cpu/cpu[[:digit:]]* | wc -w )
+fi
+
+find -maxdepth $MAXDEPTH -type d | xargs --max-args=1 --max-procs=$MAXPROCS gfr

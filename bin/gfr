@@ -1,0 +1,26 @@
+#!/bin/bash
+# gfr - fetch all and rebase
+# $1 => target directory (or cwd by default)
+
+set +v
+set -e
+
+OPTIONS=(
+    --all \
+    --prune \
+)
+
+TARGETDIR="$1"
+
+if [ ! -z "${TARGETDIR}" ]; then
+    cd "${TARGETDIR}"
+fi
+
+if [ -d ".git" ]; then
+    result=$(git fetch "${OPTIONS[@]}" && git rebase)
+    if [ $? -eq 0 ]; then
+        echo ">>> UPDATED `basename $(pwd)`"
+    else
+        echo ">>> FAILED `basename $(pwd)`"
+    fi
+fi

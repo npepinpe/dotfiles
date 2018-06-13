@@ -3,12 +3,15 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Path related variables
-export USER_BIN="~/bin"
+export USER_BIN="$HOME/bin"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-export PYENV_BIN="/home/npepinpe/.pyenv/bin"
 
 # Set defaults
 export EDITOR=vim
 
 # modify path as last option
-export PATH=$USER_BIN:$PYENV_BIN:$PATH
+export PATH=$USER_BIN:$PATH
+
+# add user paths for completion
+export fpath=("$DOTDIR/zsh/completions" $fpath)
+[ -d "$HOME/.zsh/completions" ] && export fpath=($HOME/.zsh/completions $fpath)
