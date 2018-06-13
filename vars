@@ -7,5 +7,8 @@ export USER_BIN="~/bin"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 export PYENV_BIN="/home/npepinpe/.pyenv/bin"
 
+# Set defaults
+export EDITOR=vim
+
 # modify path as last option
 export PATH=$USER_BIN:$PYENV_BIN:$PATH
