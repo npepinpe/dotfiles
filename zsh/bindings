@@ -2,8 +2,8 @@
 bindkey '^r' history-incremental-search-backward
 
 # move forward/backword across words using modifier+arrow key
-bindkey '[C' forward-word
-bindkey '[D' backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # home/end keys
 bindkey '^[[H' beginning-of-line
