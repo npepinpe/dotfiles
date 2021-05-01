@@ -59,10 +59,9 @@ prompt_exit_status() {
 
 generate_prompt() {
   prompt_exit_status $1
-  prompt_segment blue black "%~"
+  prompt_segment blue black "%(5~|%-1~/…/%2~|%4~)"
   prompt_git
   prompt_end true
 }
 
-PROMPT='%{%f%b%k%}$(generate_prompt $?) '
-RPROMPT='[$AWS_PROFILE]'
+# PROMPT='%{%f%b%k%}$(generate_prompt $?) '

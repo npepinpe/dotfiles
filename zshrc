@@ -12,7 +12,9 @@ for file in $DOTDIR/zsh/*; do
   [ -f "$file" ] && source "$file"
 done
 
-# install direnv hook if available
-if type "direnv" > /dev/null; then
-  eval "$(direnv hook zsh)"
-fi
+# Setup starship
+if [ starship ]; then eval "$(starship init zsh)"; fi
+
+# Load direnv
+if [ direnv ]; then eval "$(direnv hook zsh)"; fi
+
