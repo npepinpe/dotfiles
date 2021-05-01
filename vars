@@ -8,6 +8,9 @@ export USER_BIN="$HOME/bin"
 # Set defaults
 export EDITOR=vim
 
+# Enable BuildKit
+export DOCKER_BUILDKIT=1
+
 # modify path as last option
 export PATH=$USER_BIN:$PATH
 

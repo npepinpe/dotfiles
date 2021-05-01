@@ -1,4 +1,6 @@
 # customized from grml zsh config
+zstyle ':completion:*:*:*:default' menu yes select search
+zmodload zsh/complist
 
 # allow one error for every three characters typed in approximate completer
 zstyle ':completion:*:approximate:'    max-errors 'reply=( $((($#PREFIX+$#SUFFIX)/3 )) numeric )'
