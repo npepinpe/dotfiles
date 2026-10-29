@@ -8,6 +8,7 @@ This directory is a template for `~/.claude`. It holds only the files that are p
 |---|---|---|
 | `CLAUDE.md` | Global instructions | `~/.claude/CLAUDE.md` imports it with `@dotfiles-claude/CLAUDE.md` |
 | `agents/*.md` | Subagent definitions | One symbolic link per file |
+| `skills/*/` | Skills that are specific to this repository | One symbolic link per directory |
 | `statusline-command.sh` | Status line script. It needs `jq`. | Symbolic link |
 
 The symbolic link `~/.claude/dotfiles-claude` points to this directory. The import path is relative to `~/.claude/CLAUDE.md`, so it is the same on every machine. Only the link target changes.
@@ -35,7 +36,9 @@ Add these keys to `~/.claude/settings.json`. Do not remove other keys.
 
 ## Skills
 
-`CLAUDE.md` names two skills.
+`CLAUDE.md` names three skills.
+
+- `audience-labels` is in `skills/audience-labels` in this directory. It marks text as for humans or for agents.
 
 - `simple-english` comes from [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish). Install the skill only. Do not install the Claude Code plugin from that project. The plugin adds a session hook that changes every reply.
 - `anthropic-skills:human-voice-by-zishan` syncs from your claude.ai account.
@@ -44,8 +47,9 @@ Add these keys to `~/.claude/settings.json`. Do not remove other keys.
 
 ```sh
 S="$DOTDIR/claude"
-mkdir -p ~/.claude/agents
+mkdir -p ~/.claude/agents ~/.claude/skills
 for f in "$S"/agents/*.md; do ln -sfn "$f" ~/.claude/agents/; done
+for d in "$S"/skills/*/; do ln -sfn "${d%/}" ~/.claude/skills/; done
 ln -sfn "$S/statusline-command.sh" ~/.claude/statusline-command.sh
 ln -sfn "$S" ~/.claude/dotfiles-claude
 echo "@dotfiles-claude/CLAUDE.md" >> ~/.claude/CLAUDE.md
@@ -67,6 +71,7 @@ Install the Claude Code base configuration from the dotfiles repository.
 4. Create the directory "$HOME/.claude/agents" if it does not exist.
 5. For each file in "$SRC/agents", create a symbolic link with the same name in "$HOME/.claude/agents".
 6. If a regular file already has that name, rename it to NAME.bak first. Tell the user.
+6a. Create the directory "$HOME/.claude/skills" if it does not exist. For each directory in "$SRC/skills", create a symbolic link with the same name in "$HOME/.claude/skills". Use the same rule for an existing regular file or directory.
 7. Create a symbolic link "$HOME/.claude/statusline-command.sh" that points to "$SRC/statusline-command.sh". Use the same rule for an existing regular file.
 8. Create a symbolic link "$HOME/.claude/dotfiles-claude" that points to SRC. If it exists and points to another path, stop. Ask the user.
 9. Open "$HOME/.claude/CLAUDE.md". Create it if it does not exist.
