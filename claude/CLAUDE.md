@@ -9,7 +9,7 @@ Pick the writing skill by the kind of text. Invoke it before drafting.
 
 ## Audience Labels
 
-For text that you write on my behalf in a shared place (GitHub issues, PRs, and comments today; Slack, email, and Markdown files later), also use the `audience-labels` skill. It marks each part as for humans or for agents, so humans can skip agent detail. It composes with the writing skills above and does not replace them.
+For text that you write on my behalf in a shared place (including GitHub issues, PRs, comments, Slack, email, calendar invites, and Markdown files), also use the `audience-labels` skill. It marks each part as for humans or for agents, so humans can skip agent detail. It composes with the writing skills above and does not replace them.
 
 I always review what you write on my behalf before you send, post, or publish it. Show me the text and wait for my approval, every time.
 
