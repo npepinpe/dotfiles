@@ -180,7 +180,7 @@ These files are for agents, and readers already know it: `CLAUDE.md`, `AGENTS.md
 
 The rules for other media are not defined yet.
 
-If the medium is not GitHub, ask the user how to apply the core rules before you write the text. Do not guess. Offer this default as a suggestion only: the human part first, a clear divider, then the agent part with its labels.
+If the medium has no rule in the sections above, ask the user how to apply the core rules before you write the text. Do not guess. Offer this default as a suggestion only: the human part first, a clear divider, then the agent part with its labels.
 
 If the user answers, follow the answer for this text. Tell the user that this skill does not have a rule for that medium yet, and offer to add one.
 
