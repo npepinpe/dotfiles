@@ -23,7 +23,7 @@ Do this for every medium and every text, also for a short reply. A user approval
 
 ## Core rules
 
-These rules apply to every medium. A medium section can change how a rule is shown. It cannot remove a rule.
+These rules apply to every medium unless a medium section gives an explicit exception. Follow those exceptions when applying the rules and the self-check. The approval requirement in "Review before you send" always applies.
 
 ### The two labels
 
